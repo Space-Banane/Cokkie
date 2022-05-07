@@ -10,7 +10,7 @@ FUNCTIONS :
 -Version()
 -Trigger()
 
-
+https://github.com/Bigboi-Python/Cokkie
 
 This Programm can USED by anyone
 but DONT do anything BAD with this programm
@@ -19,13 +19,15 @@ ANYWAY have fun :)
 Cokkie© 2022 April 
 """
 
-from CokkieBase import *
 
+from CokkieBase import *
+import random
+Live_Lizenz = ''.join(random.choice([chr(i) for i in range(ord('a'),ord('z'))]) for _ in range(35))
 
 if __name__ == "Cokkie":
     pass 
 else:
-    print("THIS PROGRAMM IS CRACKED DONT USE IT ANYMORE ITS HACKED OR CURRUPED")
+    print("Please rename the file to Cokkie.py")
     print("You have 0 Seconds to end the programm")
     quit()
 
@@ -96,7 +98,10 @@ def Save(data,filename):
         file = open(filename,'w')
         file.write(data)
         file.close()
-        print("Cokkie (Cokkie.py) : Data Saved")
+        if debug == True:
+         print("Cokkie (Cokkie.py) : Data Saved")
+        else:
+         pass
     else:
         print("Sorry Reading is not allowed by your script")
 
@@ -108,13 +113,16 @@ def Read(filename):
         file = open(filename,'r')
         print(file.read())
         file.close()
-        print("Cokkie (Cokkie.py) : Read succesfully  ")
+        if debug == True:
+         print("Cokkie (Cokkie.py) : Data Read")
+        else:
+         pass
     else:
         print("Sorry Reading is not allowed by your script")
 
-def Savevar(filename,var):
+def Savevar(filename):
     file = open(filename,'r')
-    var = file.read()
+    file.read()
     file.close()
     print("Cokkie (Cokkie.py) : Saved in a var")
     
